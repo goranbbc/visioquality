@@ -22,7 +22,14 @@
     border-bottom: 1px solid #d0d0d0;
   }
 
-  header img { height: 150px; margin-bottom: 15px; }
+  header img {
+    height: 150px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   header h1 { font-weight: 600; font-size: 1.8rem; color: #1b2a49; letter-spacing: 1px; }
   header p { color: #555; font-style: italic; margin-top: 5px; }
 
@@ -86,8 +93,6 @@
   .contact-info { text-align: center; font-size: 1rem; color: #333; }
   .contact-info a { color: #1b2a49; text-decoration: none; font-weight: 600; }
 
-  iframe { width: 100%; height: 350px; border: 0; border-radius: 8px; margin-top: 25px; }
-
   footer {
     text-align: center;
     background: #fff;
@@ -99,7 +104,10 @@
   footer a { color: #1b2a49; text-decoration: none; margin: 0 10px; }
   footer a:hover { text-decoration: underline; }
 
-  @media(max-width:600px) { header img { height: 120px; } }
+  /* Manji logo na mobilnim uređajima */
+  @media(max-width:600px) {
+    header img { height: 100px; }
+  }
 
   /* Modal / Popup styling */
   .modal {
@@ -192,17 +200,9 @@ Uz našu stručnu pomoć eleminisaćete ove rizike i vašem poslovanju omogućit
   <h2>Kontakt</h2>
   <div class="contact-info">
     <p>Adresa: Hajduk Veljka 32, Gajdobra</p>
-    <p>
-      <a href="https://wa.me/381616651755" target="_blank" rel="noopener noreferrer">WhatsApp</a> |
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="mailto:info@visioquality.rs">Email</a>
-    </p>
+    <p>Telefon: <a href="tel:+381641205451">064 1205 451</a></p>
+    <p>Email: <a href="mailto:visio.quality@gmail.com">visio.quality@gmail.com</a></p>
   </div>
-  <iframe
-    src="https://www.google.com/maps?q=Hajduk%20Veljka%2032,%20Gajdobra&output=embed"
-    allowfullscreen
-    loading="lazy">
-  </iframe>
 </section>
 
 <footer>
