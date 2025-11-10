@@ -30,8 +30,17 @@
     margin-right: auto;
   }
 
-  header h1 { font-weight: 600; font-size: 1.8rem; color: #1b2a49; letter-spacing: 1px; }
-  header p { color: #555; font-style: italic; margin-top: 5px; }
+  header p {
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .firm-info {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
 
   nav {
     display: flex;
@@ -56,10 +65,25 @@
     padding: 0 20px;
   }
 
-  section h2 { text-align: center; color: #1b2a49; font-weight: 600; margin-bottom: 20px; }
-  section p { text-align: center; color: #444; font-size: 1rem; margin-bottom: 40px; }
+  section h2 {
+    text-align: center;
+    color: #1b2a49;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
 
-  .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  section p {
+    text-align: center;
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
   @media(max-width: 600px) { .services { grid-template-columns: 1fr; } }
 
   .service {
@@ -86,12 +110,29 @@
   }
   .btn-more:hover { background-color: #0f1b33; }
 
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-  .gallery img { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.4s ease; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+  }
   .gallery img:hover { transform: scale(1.03); }
 
-  .contact-info { text-align: center; font-size: 1rem; color: #333; }
-  .contact-info a { color: #1b2a49; text-decoration: none; font-weight: 600; }
+  .contact-info {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+  }
+  .contact-info a {
+    color: #1b2a49;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
   footer {
     text-align: center;
@@ -101,10 +142,14 @@
     font-size: 0.9rem;
     color: #555;
   }
-  footer a { color: #1b2a49; text-decoration: none; margin: 0 10px; }
+
+  footer a {
+    color: #1b2a49;
+    text-decoration: none;
+    margin: 0 10px;
+  }
   footer a:hover { text-decoration: underline; }
 
-  /* Manji logo na mobilnim uređajima */
   @media(max-width:600px) {
     header img { height: 100px; }
   }
@@ -140,6 +185,11 @@
 <header>
   <img src="logo vq.png" alt="Visio Quality logo">
   <p>Sprečite reklamacije na vaše isporuke i povećajte vaš ugled na tržištu.</p>
+
+  <div class="firm-info">
+    <p>Adresa: Hajduk Veljka 32, Gajdobra</p>
+    <p>PIB: 123456789 | Matični broj: 98765432</p>
+  </div>
 </header>
 
 <nav>
@@ -199,7 +249,6 @@ Uz našu stručnu pomoć eleminisaćete ove rizike i vašem poslovanju omogućit
 <section id="kontakt">
   <h2>Kontakt</h2>
   <div class="contact-info">
-    <p>Adresa: Hajduk Veljka 32, Gajdobra</p>
     <p>Telefon: <a href="tel:+381641205451">064 1205 451</a></p>
     <p>Email: <a href="mailto:visio.quality@gmail.com">visio.quality@gmail.com</a></p>
   </div>
