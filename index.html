@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visio Quality</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   body {
     font-family: 'Montserrat', sans-serif;
@@ -24,22 +25,41 @@
 
   header img {
     height: 150px;
-    margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  @media(max-width:600px) {
+    header img {
+      height: 110px;
+    }
+  }
+
+  .firm-info {
+    margin-bottom: 10px;
+  }
+
+  .firm-info p {
+    margin: 3px 0;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .firm-info i {
+    color: #1b2a49;
+    margin-right: 6px;
+  }
+
+  header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #1b2a49;
+    letter-spacing: 1px;
   }
 
   header p {
     color: #555;
+    font-style: italic;
     margin-top: 5px;
-  }
-
-  .firm-info {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
   }
 
   nav {
@@ -84,7 +104,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  @media(max-width: 600px) { .services { grid-template-columns: 1fr; } }
+  @media(max-width: 600px) {
+    .services { grid-template-columns: 1fr; }
+  }
 
   .service {
     background: #fff;
@@ -94,9 +116,23 @@
     text-align: center;
     transition: transform 0.3s ease, background 0.3s ease;
   }
-  .service:hover { transform: translateY(-5px); background: #e6f0fa; }
-  .service h3 { color: #1b2a49; font-weight: 600; margin-bottom: 10px; }
-  .short-desc { color: #555; font-size: 0.95rem; margin-bottom: 15px; }
+
+  .service:hover {
+    transform: translateY(-5px);
+    background: #e6f0fa;
+  }
+
+  .service h3 {
+    color: #1b2a49;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .short-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
 
   .btn-more {
     padding: 10px 20px;
@@ -108,30 +144,40 @@
     font-weight: 600;
     transition: background 0.3s;
   }
-  .btn-more:hover { background-color: #0f1b33; }
+  .btn-more:hover {
+    background-color: #0f1b33;
+  }
 
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
   }
+
   .gallery img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.4s ease;
   }
-  .gallery img:hover { transform: scale(1.03); }
+
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
 
   .contact-info {
     text-align: center;
     font-size: 1rem;
     color: #333;
   }
-  .contact-info a {
+
+  .contact-info p {
+    margin: 10px 0;
+  }
+
+  .contact-info i {
     color: #1b2a49;
-    text-decoration: none;
-    font-weight: 600;
+    margin-right: 8px;
   }
 
   footer {
@@ -148,26 +194,23 @@
     text-decoration: none;
     margin: 0 10px;
   }
+
   footer a:hover { text-decoration: underline; }
 
-  @media(max-width:600px) {
-    header img { height: 100px; }
-  }
-
-  /* Modal / Popup styling */
+  /* Modal */
   .modal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     z-index: 1000;
     left: 0; top: 0;
-    width: 100%; height: 100%; 
-    overflow: auto; 
+    width: 100%; height: 100%;
+    overflow: auto;
     background-color: rgba(0,0,0,0.5);
   }
 
   .modal-content {
     background-color: #fff;
-    margin: 10% auto; 
+    margin: 10% auto;
     padding: 30px;
     border-radius: 8px;
     max-width: 500px;
@@ -175,21 +218,38 @@
     position: relative;
   }
 
-  .modal-content img { max-width: 100%; margin: 15px 0; border-radius: 8px; }
-  .close { color: #1b2a49; position: absolute; top: 10px; right: 15px; font-size: 24px; font-weight: bold; cursor: pointer; }
-  .close:hover { color: #0f1b33; }
+  .modal-content img {
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+  }
+
+  .close {
+    color: #1b2a49;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #0f1b33;
+  }
 </style>
 </head>
 <body>
 
 <header>
   <img src="logo vq.png" alt="Visio Quality logo">
-  <p>Sprečite reklamacije na vaše isporuke i povećajte vaš ugled na tržištu.</p>
 
   <div class="firm-info">
-    <p>Adresa: Hajduk Veljka 32, Gajdobra</p>
-    <p>PIB: 123456789 | Matični broj: 98765432</p>
+    <p><i class="fa-solid fa-location-dot"></i>Hajduk Veljka 32, Gajdobra</p>
+    <p><i class="fa-solid fa-file-invoice"></i>PIB: 123456789 | Matični broj: 98765432</p>
   </div>
+
+  <p>Sprečite reklamacije na vaše isporuke i povećajte vaš ugled na tržištu.</p>
 </header>
 
 <nav>
@@ -249,8 +309,8 @@ Uz našu stručnu pomoć eleminisaćete ove rizike i vašem poslovanju omogućit
 <section id="kontakt">
   <h2>Kontakt</h2>
   <div class="contact-info">
-    <p>Telefon: <a href="tel:+381641205451">064 1205 451</a></p>
-    <p>Email: <a href="mailto:visio.quality@gmail.com">visio.quality@gmail.com</a></p>
+    <p><i class="fa-solid fa-phone"></i>064 1205 451</p>
+    <p><i class="fa-solid fa-envelope"></i>visio.quality@gmail.com</p>
   </div>
 </section>
 
@@ -258,7 +318,7 @@ Uz našu stručnu pomoć eleminisaćete ove rizike i vašem poslovanju omogućit
   © 2025 Visio Quality | Dizajn: Visio Quality
 </footer>
 
-<!-- Modal / Popup -->
+<!-- Modal -->
 <div id="serviceModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
